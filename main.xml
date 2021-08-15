@@ -1,0 +1,11 @@
+<mod name="Quality_of_Life">
+	<AssetUpdates id="Jamemes/OP-self-update" version="1" provider="github" use_local_dir="true" use_local_path="true"/>
+	<Hooks>
+		<hook source_file="lib/managers/menumanager" file="QoL.lua"/>
+    </Hooks>
+	<ScriptMods>
+		<mod file="menu.xml" type="custom_xml" target_file="gamedata/menus/start_menu" target_type="menu">
+			<options merge_mode="script_merge"/>
+		</mod>
+    </ScriptMods>
+</mod>
