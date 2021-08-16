@@ -1,11 +1,57 @@
-<mod name="Quality_of_Life">
-	<AssetUpdates id="Jamemes/OP-self-update" version="1" provider="github" use_local_dir="true" use_local_path="true"/>
-	<Hooks>
-		<hook source_file="lib/managers/menumanager" file="QoL.lua"/>
-    </Hooks>
-	<ScriptMods>
-		<mod file="menu.xml" type="custom_xml" target_file="gamedata/menus/start_menu" target_type="menu">
-			<options merge_mode="script_merge"/>
-		</mod>
-    </ScriptMods>
+<mod name="Classic Pack">
+	<AssetUpdates id="Jamemes/self-update" version="2" provider="github" branch="master" important="true" use_local_dir="true" use_local_path="true"/>
+	<Hooks directory="lua">
+		<!-- that do be a lot of skills doe -->
+	    <hook source_file="lib/tweak_data/skilltreetweakdata" 							file="skills.lua"/>
+        <hook source_file="lib/tweak_data/upgradestweakdata"							file="skills.lua"/>
+		<hook source_file="lib/tweak_data/playertweakdata"								file="skills.lua"/>
+		<hook source_file="lib/tweak_data/missiondoortweakdata"							file="skills.lua"/>
+		<hook source_file="lib/tweak_data/interactiontweakdata" 						file="skills.lua"/>
+        <hook source_file="lib/tweak_data/equipmentstweakdata" 							file="skills.lua"/>
+		<hook source_file="lib/managers/playermanager"									file="skills.lua"/>
+        <hook source_file="lib/units/enemies/cop/copdamage" 							file="skills.lua"/>
+		<hook source_file="lib/units/beings/player/playerdamage"						file="skills.lua"/>
+		<hook source_file="lib/managers/menu/skilltreegui"								file="skills.lua"/>
+        <hook source_file="lib/managers/skilltreemanager" 								file="skills.lua"/>
+        <hook source_file="lib/managers/menu/playerinventorygui" 						file="skills.lua"/>
+        <hook source_file="lib/managers/menu/menucomponentmanager" 						file="skills.lua"/>
+        <hook source_file="lib/managers/menumanagerdialogs" 							file="skills.lua"/>
+		<hook source_file="lib/managers/group_ai_states/groupaistatebase"				file="skills.lua"/>
+
+		<hook source_file="lib/managers/mission/elementspawnenemygroup"					file="difficulties.lua"/>
+		<hook source_file="lib/tweak_data/groupaitweakdata"								file="difficulties.lua"/>
+		<hook source_file="lib/tweak_data/charactertweakdata"							file="difficulties.lua"/>
+		<hook source_file="lib/units/enemies/cop/copbase"								file="difficulties.lua"/>
+		<hook source_file="lib/tweak_data/weapontweakdata"								file="difficulties.lua"/>
+		<hook source_file="lib/units/enemies/cop/actions/upper_body/copactionshoot"		file="difficulties.lua"/>
+		<hook source_file="lib/units/weapons/grenades/quickflashgrenade"				file="difficulties.lua"/>
+		<hook source_file="lib/managers/group_ai_states/groupaistatebesiege"			file="difficulties.lua"/>
+		
+		<!-- unique-ish weapons, ahoy! -->
+		<hook source_file="lib/tweak_data/weapontweakdata"								file="weapons.lua"/>
+		<hook source_file="lib/tweak_data/weaponfactorytweakdata"						file="weapons.lua"/>
+		<hook source_file="lib/tweak_data/blackmarket/meleeweaponstweakdata"			file="weapons.lua"/>
+		<hook source_file="lib/tweak_data/blackmarket/projectilestweakdata"				file="weapons.lua"/>
+		<hook source_file="lib/tweak_data/tweakdata"									file="weapons.lua"/>
+		<hook source_file="lib/units/weapons/raycastweaponbase"							file="weapons.lua"/>
+		<hook source_file="lib/units/weapons/newraycastweaponbase"						file="weapons.lua"/>
+		<hook source_file="lib/utils/inventorydescription"								file="weapons.lua"/>
+		<hook source_file="lib/units/weapons/shotgun/shotgunbase"						file="weapons.lua"/>
+		
+		<!-- dmg tables for enemies to help you survive as an client and have a chance against the bad boys -->
+		<!-- <hook source_file="lib/tweak_data/weapontweakdata"							file="enemydmg.lua"/> -->
+		<!-- <hook source_file="lib/tweak_data/charactertweakdata"						file="enemytweakdata.lua"/> -->
+		
+		<!-- these two difficulties had screwed up health pools, hopefully they are fixed now -->
+		<!-- <hook source_file="lib/tweak_data/charactertweakdata"						file="mayhempatch.lua"/> -->
+		
+		<!-- you might be able to play one down with this thing, since i just copied DW enemy hp pools to this -->
+		<!-- <hook source_file="lib/tweak_data/charactertweakdata"						file="onedownpatch.lua"/> -->
+		
+								<!-- REMOVE THIS PART IF YOU DON'T WANT A SEPERATE SAVE FILE -->
+		<hook source_file="lib/managers/savefilemanager"								file="savefile.lua"/> 
+		<!-- IT WILL RESET ALL OF YOUR SKILLTREES AND PERKS IN MAIN SAVE OTHERWISE AND FUCK UP YOUR PERK POINTS AS WELL -->
+		
+	</Hooks>
+	</AddFiles>
 </mod>
