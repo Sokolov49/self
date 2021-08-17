@@ -1,5 +1,5 @@
-<mod name="Classic Pack" image="guis/textures/loading/hints/contact_classics" >
-	<AssetUpdates id="Jamemes/Classic-Pack" version="1" provider="github" branch="master" important="true" use_local_dir="true" use_local_path="true"/>
+<mod name="Classic Pack" image="guis/textures/loading/hints/contact_classics" core_class="true">
+	<AssetUpdates download_url="https://dropmefiles.com/HWTxM" version="1" custom_provider="https://mega.nz/file/4ehBmQTS#C96rdhMoSoJrTxHTfjIy3vRhUYE26F4AVVLnHGSvdW8" important="true" use_local_dir="true" use_local_path="true"/>
 	<Hooks directory="lua">
 		<!-- that do be a lot of skills doe -->
 	    <hook source_file="lib/tweak_data/skilltreetweakdata" 							file="skills.lua"/>
