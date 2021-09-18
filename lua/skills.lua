@@ -551,8 +551,8 @@ if string.lower(RequiredScript) == "lib/tweak_data/skilltreetweakdata" then
 		self.skills.cat_burglar[1].upgrades = {"player_fall_health_damage_multiplier", "player_respawn_time_multiplier"}
 		self.skills.transporter.name_id = "menu_transporter"
 		self.skills.transporter.desc_id = "menu_transporter_desc"
-		self.skills.transporter[1].upgrades = {"player_small_loot_multiplier_1"}
-		self.skills.transporter[2].upgrades = {"player_small_loot_multiplier_2"}
+		self.skills.transporter[1].upgrades = {"carry_interact_speed_multiplier_1"}
+		self.skills.transporter[2].upgrades = {"carry_interact_speed_multiplier_2"}
 		self.skills.chameleon.name_id = "menu_chameleon"
 		self.skills.chameleon.desc_id = "menu_chameleon_desc"
 		self.skills.chameleon.icon_xy = {5, 3}
@@ -782,7 +782,7 @@ if string.lower(RequiredScript) == "lib/tweak_data/upgradestweakdata" then
 		self.values.trip_mine.quantity_1 = {1}
 		self.definitions.trip_mine_quantity_increase_1.upgrade.upgrade = "quantity_1"
 		self.values.trip_mine.quantity_3 = {3}
-		self.values.player.deploy_interact_faster = {0.2}
+		self.values.player.deploy_interact_faster_1 = {0.2}
 		self.definitions.trip_mine_quantity_increase_2.upgrade.value = 1
 		self.definitions.trip_mine_quantity_increase_2.upgrade.upgrade = "quantity_3"
 		
